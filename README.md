@@ -157,7 +157,7 @@ sent by the server.
 ## Code of conduct
 
 This project and everyone participating in it is governed by the
-[AI Academy Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are
+[Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are
 expected to uphold this code. Please report unacceptable behavior to
 willem.meints@gmail.com.
 
