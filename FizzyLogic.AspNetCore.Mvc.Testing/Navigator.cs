@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using System;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace FizzyLogic.AspNetCore.Mvc.Testing
@@ -16,7 +17,7 @@ namespace FizzyLogic.AspNetCore.Mvc.Testing
         /// <param name="client">HTTP client instance to use for navigation.</param>
         public Navigator(HttpClient client)
         {
-            _client = client;
+            _client = client ?? throw new ArgumentNullException(nameof(client));
         }
 
         /// <summary>
@@ -27,6 +28,8 @@ namespace FizzyLogic.AspNetCore.Mvc.Testing
         /// <returns>Returns a tuple containing the HTTP response and the loaded page if the response indicated success.</returns>
         public async Task<(HttpResponseMessage, TPage)> NavigateToAsync<TPage>(string uri) where TPage : PageModel
         {
+            if(string.IsNullOrEmpty(uri)) throw new ArgumentNullException(nameof(uri));
+            
             var (response, page) = await _client.GetHtmlDocumentAsync(uri);
 
             if (response.IsSuccessStatusCode)

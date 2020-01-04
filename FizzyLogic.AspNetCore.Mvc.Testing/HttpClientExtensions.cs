@@ -19,6 +19,8 @@ namespace FizzyLogic.AspNetCore.Mvc.Testing
         /// <returns>Returns the HTTP response received after submitting the form.</returns>
         public static Task<HttpResponseMessage> SubmitFormAsync(this HttpClient client, IHtmlFormElement form)
         {
+            if(form == null) throw new ArgumentNullException(nameof(form));
+            
             var submitButton = form.QuerySelector("[type=submit]") as IHtmlElement;
 
             return SubmitFormAsync(client, form, submitButton);
@@ -33,6 +35,9 @@ namespace FizzyLogic.AspNetCore.Mvc.Testing
         /// <returns>Returns the HTTP response received after submitting the form.</returns>
         public static Task<HttpResponseMessage> SubmitFormAsync(this HttpClient client, IHtmlFormElement form, IHtmlElement submitButton)
         {
+            if(form == null) throw new ArgumentNullException(nameof(form));
+            if(submitButton == null) throw new ArgumentNullException(nameof(submitButton));
+            
             var formSubmission = form.GetSubmission(submitButton);
             var targetUri = (Uri)formSubmission.Target;
             
