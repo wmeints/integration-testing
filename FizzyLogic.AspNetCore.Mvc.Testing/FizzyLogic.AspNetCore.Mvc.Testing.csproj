@@ -5,8 +5,7 @@
     <PackageProjectUrl>https://github.com/wmeints/integration-testing</PackageProjectUrl>
     <RepositoryUrl>https://github.com/wmeints/integration-testing</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageVersion>1.0.3</PackageVersion>
-    <PackageReleaseNotes>CHANGELOG</PackageReleaseNotes>
+    <PackageVersion>1.0.4</PackageVersion>
     <PackageTags>aspnetcore;aspnetcoremvc;aspnetcoremvctesting</PackageTags>
   </PropertyGroup>
   <ItemGroup>
