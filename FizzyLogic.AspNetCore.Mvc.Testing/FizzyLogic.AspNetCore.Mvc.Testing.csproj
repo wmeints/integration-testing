@@ -1,10 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageProjectUrl>https://github.com/wmeints/integration-testing</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/wmeints/integration-testing</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageVersion>1.0.3</PackageVersion>
+    <PackageReleaseNotes>CHANGELOG</PackageReleaseNotes>
+    <PackageTags>aspnetcore;aspnetcoremvc;aspnetcoremvctesting</PackageTags>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.0"/>
-    <PackageReference Include="AngleSharp" Version="0.13.0"/>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.0" />
+    <PackageReference Include="AngleSharp" Version="0.13.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../LICENSE" Pack="true" PackagePath=""/>
+    <None Include="../CHANGELOG" Pack="true" PackagePath=""/>
   </ItemGroup>
 </Project>
