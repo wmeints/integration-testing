@@ -24,7 +24,7 @@ Follow these steps to get started using the library:
 You can add a reference to the package using the dotnet CLI:
 
 ```shell
-dotnet add package FizzyLogic.AspNetCore.IntegrationTesting
+dotnet add package FizzyLogic.AspNetCore.Mvc.Testing
 ```
 
 Alternatively, search for the package in the Visual Studio package manager.
@@ -32,7 +32,7 @@ Or add the package using the following command in the Package Manager Console
 inside Visual Studio:
 
 ```powershell
-Install-Package FizzyLogic.AspNetCore.IntegrationTesting
+Install-Package FizzyLogic.AspNetCore.Mvc.Testing
 ```
 
 ### Create a page object
@@ -75,9 +75,8 @@ To submit the page to the server we'll add a `SubmitAsync` method:
 public async Task<HttpResponseMessage> SubmitAsync()
 {
     var logOnForm = Document.Form("logon");
-    var submitButton = logOnForm.SubmitButton();
 
-    return await Client.SubmitFormAsync(logOnForm, submitButton);
+    return await Client.SubmitFormAsync(logOnForm);
 }
 ```
 
