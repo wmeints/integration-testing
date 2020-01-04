@@ -1,4 +1,4 @@
-# Integration test library
+# FizzyLogic.AspNetCore.Mvc.Testing
 
 While ASP.NET Core provides great utilities for testing web applications, it
 doesn't provide a lot of help integration testing pages in a web application.
