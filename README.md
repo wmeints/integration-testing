@@ -25,6 +25,7 @@ You can add a reference to the package using the dotnet CLI:
 
 ```shell
 dotnet add package FizzyLogic.AspNetCore.Mvc.Testing
+dotnet add package Microsoft.AspNetCore.Mvc.Testing
 ```
 
 Alternatively, search for the package in the Visual Studio package manager.
@@ -33,7 +34,12 @@ inside Visual Studio:
 
 ```powershell
 Install-Package FizzyLogic.AspNetCore.Mvc.Testing
+Install-Package Microsoft.AspNetCore.Mvc.Testing
 ```
+
+> Please be aware, you are required to also add a reference to the `Microsoft.AspNetcore.Mvc.Testing` package
+> directly, even though this library has a reference to it as well. The original package from Microsoft includes
+> a MSBuild targets file that automatically configures your test project correctly.
 
 ### Create a page object
 
