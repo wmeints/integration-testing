@@ -5,12 +5,15 @@
     <PackageProjectUrl>https://github.com/wmeints/integration-testing</PackageProjectUrl>
     <RepositoryUrl>https://github.com/wmeints/integration-testing</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageVersion>1.0.5</PackageVersion>
+    <PackageVersion>1.0.6</PackageVersion>
     <PackageTags>aspnetcore;aspnetcoremvc;aspnetcoremvctesting</PackageTags>
     <Authors>WMeints</Authors>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.0">
+      <IncludeAssets>All</IncludeAssets>
+      <PrivateAssets>None</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="AngleSharp" Version="0.13.0" />
   </ItemGroup>
   <ItemGroup>
